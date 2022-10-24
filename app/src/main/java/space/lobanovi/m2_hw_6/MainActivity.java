@@ -29,14 +29,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void OnClickListener() {
+        TextView singAPP = findViewById(R.id.text);
+        TextView login = findViewById(R.id.login);
+        TextView x = findViewById(R.id.x);
+        TextView show = findViewById(R.id.show);
+        TextView f = findViewById(R.id.textView2);
+        TextView text = findViewById(R.id.textView3);
+        TextView your = findViewById(R.id.your);
+        EditText textName = findViewById(R.id.text1);
         EditText textEmail = findViewById(R.id.text2);
         EditText textLogin = findViewById(R.id.text3);
+
         Button btn = findViewById(R.id.button);
 
         btn.setOnClickListener(View ->{
 
-            if (textEmail.getText().toString().equals("  Clown")|textLogin.getText().toString().equals("  password")) {
+            if (textEmail.getText().toString().equals("  Clown") & textLogin.getText().toString().equals("  password")) {
                 Toast.makeText(getApplicationContext(), "Вход выполнен", Toast.LENGTH_LONG).show();
+                singAPP.setVisibility(android.view.View.GONE);
+                login.setVisibility(android.view.View.GONE);
+                x.setVisibility(android.view.View.GONE);
+                show.setVisibility(android.view.View.GONE);
+                f.setVisibility(android.view.View.GONE);
+                text.setVisibility(android.view.View.GONE);
+                your.setVisibility(android.view.View.GONE);
+                textName.setVisibility(android.view.View.GONE);
                 textEmail.setVisibility(android.view.View.GONE);
                 textLogin.setVisibility(android.view.View.GONE);
             }
